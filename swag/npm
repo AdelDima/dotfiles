@@ -1,0 +1,8 @@
+eslint::eslint
+gatsby-cli::gatsby
+git-standup::git-standup
+gulp-cli::gulp
+imageoptim-cli::imageOptim
+vue-cli::vue
+netlify-cli::netlify
+jshint::jshint
