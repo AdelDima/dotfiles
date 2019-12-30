@@ -232,6 +232,8 @@ else
 	ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
 	print_success ".zshrc Configured"
 fi
+step "Installing zsh-autosuggestions…"
+git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.dotfiles/zsh/plugins/zsh-autosuggestions
 
 # -----------------------------------------------------------------------------
 # Oh My Zsh
@@ -243,8 +245,11 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 print_in_green "${bold}✓ installed!${normal}\n"
 
 step "Installing spaceship theme for Oh My Zsh…"
-sh -c "$(git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt")"
+customzsh=$HOME/.dotfiles//zsh
+git clone https://github.com/denysdovhan/spaceship-prompt.git "$HOME/.dotfiles/zsh/themes/spaceship-prompt"
 print_in_green "${bold}✓ installed!${normal}\n"
+echo $customzsh
+ln -s "$customzsh/themes/spaceship-prompt/spaceship.zsh-theme" "$customzsh/themes/spaceship.zsh-theme"
 
 # Symlink the Mackup config file to the home directory.
 ln -s ~/.dotfiles/.mackup.cfg ~/.mackup.cfg
