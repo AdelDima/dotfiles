@@ -4,6 +4,7 @@ docker
 virtualbox
 local
 dropbox
+blisk
 firefox
 google-chrome
 hyper
