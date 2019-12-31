@@ -1,2 +1,4 @@
 run_local.sh
 .DS_Store
+zsh/themes/*
+zsh/plugins/*
