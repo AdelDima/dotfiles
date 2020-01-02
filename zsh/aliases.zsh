@@ -6,16 +6,10 @@ alias ll="/usr/local/opt/coreutils/libexec/gnubin/ls -ahlF --color --group-direc
 weather() { curl -4 wttr.in/${1:-antwerp} }
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 alias c="clear"
-alias zbundle="antibody bundle < $DOTFILES/zsh_plugins.txt > $DOTFILES/zsh_plugins.sh"
 
 # Directories
-alias dotfiles="cd $DOTFILES"
+alias dotfiles="cd $HOME/.dotfiles"
 alias library="cd $HOME/Library"
-alias sites="cd $HOME/Sites"
-
-# Laravel
-alias a="php artisan"
-alias ams="php artisan migrate:fresh --seed"
 
 # PHP
 alias php73="/usr/local/Cellar/php@7.3/7.3.12/bin/php"
@@ -23,15 +17,6 @@ alias cfresh="rm -rf vendor/ composer.lock && composer i"
 
 # JS
 alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
-alias watch="npm run watch"
-
-# Docker
-alias docker-composer="docker-compose"
-#alias dstop="docker stop $(docker ps -a -q)"
-#alias dpurgecontainers="dstop && docker rm $(docker ps -a -q)"
-#alias dpurgeimages="docker rmi $(docker images -q)"
-#dbuild() { docker build -t=$1 .; }
-#dbash() { docker exec -it $(docker ps -aqf "name=$1") bash; }
 
 # Git
 alias commit="git add . && git commit -m"
@@ -51,21 +36,19 @@ alias zshconfig="code ~/.zshrc"
 alias ohmyzsh="code ~/.oh-my-zsh"
 
 # Aliases for a few useful commands
-alias test="/Volumes/os_hdd/www/test/app/public/wp-content/themes"
 alias adeltahri="/Volumes/os_hdd/www/ziro/app/public/adeltahri.dev"
 
-alias noor="/Volumes/os_hdd/www/noor/app/public/wp-content/themes/noor"
-alias noorwp="code /Volumes/os_hdd/www/noor/app/public/wp-content/themes/noor/noor.code-workspace"
+alias noor=$HOME"/Projects/PixelDima/Sites/NoorWP/app/public/wp-content/themes/noor"
+alias noor_a=$HOME"/Projects/PixelDima/Sites/NoorWP/app/public/wp-content/plugins/noor_assistant"
+alias noorwp="code "$HOME"/Projects/PixelDima/Sites/NoorWP/app/public/wp-content/themes/noor/noor.code-workspace"
 
-alias okab="/Volumes/os_hdd/www/okab/app/public/wp-content/themes/okab"
-alias okabwp="code /Volumes/os_hdd/www/okab/app/public/wp-content/themes/okab.code-workspace"
+alias okab=$HOME"/Projects/PixelDima/Sites/OkabWP/app/public/wp-content/themes/okab"
+alias okabwp="code "$HOME"/Projects/PixelDima/Sites/OkabWP/app/public/wp-content/themes/okab.code-workspace"
+alias okab_a=$HOME"/Projecgsts/PixelDima/Sites/OkabWP/app/public/wp-content/plugins/dima_shortcodes"
+alias okab_p=$HOME"/Projects/PixelDima/Sites/OkabWP/app/public/wp-content/plugins/dima-portfolio"
 
-alias noor_a="/Volumes/os_hdd/www/noor/app/public/wp-content/plugins/noor_assistant"
-alias okab_a="/Volumes/os_hdd/www/okab/app/public/wp-content/plugins/dima_shortcodes"
-alias okab_p="/Volumes/os_hdd/www/okab/app/public/wp-content/plugins/dima-portfolio"
-
-alias dima_api="/Volumes/os_hdd/www/ziro/app/public/aws-update"
-alias noor_data="/Volumes/os_hdd/www/noor-data"
+alias dima_api= $HOME"/pixeldima/api/pixeldima-api/aws-update"
+alias noor_data=$HOME"/pixeldima/api/pixeldima-api/noor-data"
 
 # Git Commit, Add all, and Push — in one step.
 function gcap() {

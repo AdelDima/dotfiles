@@ -309,7 +309,7 @@ done
 chapter "Create directory…"
 # This is a default directory for macOS user accounts but doesn't comes pre-installed
 DIRECTORIES=(
-	$HOME/Projects/PixelDima/{Sites/{OkabWP,NoorWP},api,deploy/{Gitlab/{okab,noor},Themeforest/{okab,noor}}}
+	$HOME/Projects/PixelDima/{Sites/{OkabWP,NoorWP},api,deploy/{Gitlab/{okab,noor},Themeforest/{okab/main/okab\ theme,noor/main/noor\ theme}}}
 	$HOME/Code/{github,test}
 )
 
