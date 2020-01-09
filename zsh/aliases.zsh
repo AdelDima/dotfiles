@@ -47,8 +47,11 @@ alias okabwp="code "$HOME"/Projects/PixelDima/Sites/OkabWP/app/public/wp-content
 alias okab_a=$HOME"/Projecgsts/PixelDima/Sites/OkabWP/app/public/wp-content/plugins/dima_shortcodes"
 alias okab_p=$HOME"/Projects/PixelDima/Sites/OkabWP/app/public/wp-content/plugins/dima-portfolio"
 
-alias dima_api= $HOME"/pixeldima/api/pixeldima-api/aws-update"
-alias noor_data=$HOME"/pixeldima/api/pixeldima-api/noor-data"
+alias dapi=$HOME"/Projects/PixelDima/api/pixeldima-api/aws-update"
+alias noor_data=$HOME"/Projects/PixelDima/api/noor-data"
+
+alias test=$HOME"/Projects/PixelDima/Sites/TestWP/app/public/wp-content/themes/"
+
 
 # Git Commit, Add all, and Push — in one step.
 function gcap() {
