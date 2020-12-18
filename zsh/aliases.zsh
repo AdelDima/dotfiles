@@ -43,7 +43,7 @@ alias noor_a=$HOME"/Projects/PixelDima/Sites/NoorWP/app/public/wp-content/plugin
 alias noorwp="code "$HOME"/Projects/PixelDima/Sites/NoorWP/app/public/wp-content/themes/noor/noor.code-workspace"
 
 alias okab=$HOME"/Projects/PixelDima/Sites/OkabWP/app/public/wp-content/themes/okab"
-alias okabwp="code "$HOME"/Projects/PixelDima/Sites/OkabWP/app/public/wp-content/themes/okab.code-workspace"
+alias okabwp="code "$HOME"/Projects/PixelDima/Sites/OkabWP/app/public/wp-content/themes/okab/okab.code-workspace"
 alias okab_a=$HOME"/Projects/PixelDima/Sites/OkabWP/app/public/wp-content/plugins/dima_shortcodes"
 alias okab_p=$HOME"/Projects/PixelDima/Sites/OkabWP/app/public/wp-content/plugins/dima-portfolio"
 
