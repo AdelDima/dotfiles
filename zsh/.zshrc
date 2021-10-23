@@ -138,3 +138,5 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh

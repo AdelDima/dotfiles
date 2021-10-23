@@ -48,9 +48,13 @@ alias okab_a=$HOME"/Projects/PixelDima/Sites/OkabWP/app/public/wp-content/plugin
 alias okab_p=$HOME"/Projects/PixelDima/Sites/OkabWP/app/public/wp-content/plugins/dima-portfolio"
 
 alias dapi=$HOME"/Projects/PixelDima/api/pixeldima-api/aws-update"
+alias apiws="code "$HOME"/Projects/PixelDima/api/pixeldima-api/api.code-workspace"
+
 alias noor_data=$HOME"/Projects/PixelDima/api/noor-data"
 
 alias test=$HOME"/Projects/PixelDima/Sites/TestWP/app/public/wp-content/themes/"
+
+
 
 
 # Git Commit, Add all, and Push — in one step.
