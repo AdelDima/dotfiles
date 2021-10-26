@@ -1716,7 +1716,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/adeltahri/.dotfiles/iTerm2</string>
+	<string>/Users/adeltahri/dotfiles/iTerm2</string>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>SUEnableAutomaticChecks</key>

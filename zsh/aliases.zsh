@@ -8,11 +8,10 @@ alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 alias c="clear"
 
 # Directories
-alias dotfiles="cd $HOME/.dotfiles"
+alias dotfiles="cd $HOME/dotfiles"
 alias library="cd $HOME/Library"
 
 # PHP
-alias php73="/usr/local/Cellar/php@7.3/7.3.12/bin/php"
 alias cfresh="rm -rf vendor/ composer.lock && composer i"
 
 # JS
@@ -53,8 +52,6 @@ alias apiws="code "$HOME"/Projects/PixelDima/api/pixeldima-api/api.code-workspac
 alias noor_data=$HOME"/Projects/PixelDima/api/noor-data"
 
 alias test=$HOME"/Projects/PixelDima/Sites/TestWP/app/public/wp-content/themes/"
-
-
 
 
 # Git Commit, Add all, and Push — in one step.

@@ -9,7 +9,7 @@ It can be run multiple times on the same machine safely. It installs, upgrades, 
 Download the script on your $HOME directory:
 
 ```sh
-git clone https://github.com/AdelDima/dotfiles.git ~/.dotfiles && cd .dotfiles
+git clone https://github.com/AdelDima/dotfiles.git ~/dotfiles && cd dotfiles
 ```
 
 I created this based on my own preferences; your mileage may vary.

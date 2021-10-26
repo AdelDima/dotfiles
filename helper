@@ -23,7 +23,7 @@ indent="   "
 # Get full directory name of this script
 cwd="$(cd "$(dirname "$0")" && pwd)"
 
-DOTFILES_ROOT=$HOME/.dotfiles
+DOTFILES_ROOT=$HOME/dotfiles
 
 ###############################################################################
 # Utility Functions
@@ -551,9 +551,9 @@ install_brews() {
 }
 
 install_application_via_brew() {
-    if [[ ! $(brew cask list | grep $cask) ]]; then
+    if [[ ! $(brew list --cask  | grep $cask) ]]; then
         echo_install "Installing $cask"
-        brew cask install $cask --appdir=/Applications >/dev/null
+        brew install --cask $cask --appdir=/Applications >/dev/null
         print_in_green "${bold}✓ installed!${normal}\n"
     else
         print_success_muted "$cask already installed. Skipped."
@@ -561,9 +561,9 @@ install_application_via_brew() {
 }
 
 install_font_via_brew() {
-    if [[ ! $(brew cask list | grep $font) ]]; then
+    if [[ ! $(brew list --cask | grep $font) ]]; then
         echo_install "Installing $font"
-        brew cask install $font --appdir=/Applications >/dev/null
+        brew install --cask  $font --appdir=/Applications >/dev/null
         print_in_green "${bold}✓ installed!${normal}\n"
     else
         print_success_muted "$font already installed. Skipped."

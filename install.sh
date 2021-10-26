@@ -105,8 +105,8 @@ fi
 # -----------------------------------------------------------------------------
 if ! [ -x "$(command -v brew)" ]; then
 	step "Installing Homebrew…"
-	curl -fsS 'https://raw.githubusercontent.com/Homebrew/install/master/install' | ruby
-	export PATH="/usr/local/bin:$PATH"
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/adeltahri/.zprofile eval "$(/opt/homebrew/bin/brew shellenv)"
 	print_success "Homebrew installed!"
 else
 	print_success_muted "Homebrew already installed. Skipping."
@@ -157,7 +157,7 @@ fi
 ###############################################################################
 if [ -e $cwd/swag/fonts ]; then
 	chapter "Installing fonts via Homebrew…"
-
+	brew tap homebrew/cask-fonts
 	for font in $(<$cwd/swag/fonts); do
 		install_font_via_brew $font
 	done
@@ -194,143 +194,3 @@ fi
 ###############################################################################
 chapter "Cleaning up Homebrew files…"
 brew cleanup 2>/dev/null
-
-###############################################################################
-# INSTALL: npm packages
-###############################################################################
-if [ -e $cwd/swag/npm ]; then
-	chapter "Installing npm packages…"
-
-	for pkg in $(<$cwd/swag/npm); do
-		KEY="${pkg%%::*}"
-		VALUE="${pkg##*::}"
-		install_npm_packages $KEY $VALUE
-	done
-fi
-
-# -----------------------------------------------------------------------------
-# ZSH
-# -----------------------------------------------------------------------------
-chapter "Configure ZSH…"
-
-FILE=$HOME/.zshrc
-if test -f "$FILE"; then
-	print_success_muted ".zshrc already exists."
-	if ask "Do you want to reset .zshrc?" Y; then
-		step "reset .zshrc…"
-		step "1 - Removes old .zshrc…"
-		#Removes .zshrc from $HOME (if it exists).
-		rm -rf $HOME/.zshrc
-		step "2 - ymlinks the .zshrc file from the .dotfiles…"
-		# ymlinks the .zshrc file from the .dotfiles.
-		ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
-		print_success ".zshrc Configured"
-	fi
-else
-	step "1 - ymlinks the .zshrc file from the .dotfiles…"
-	# ymlinks the .zshrc file from the .dotfiles.
-	ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
-	print_success ".zshrc Configured"
-fi
-step "Installing zsh-autosuggestions…"
-git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.dotfiles/zsh/plugins/zsh-autosuggestions
-
-# -----------------------------------------------------------------------------
-# Oh My Zsh
-# -----------------------------------------------------------------------------
-
-chapter "Installing Oh My Zsh…"
-step "Installing Oh My Zsh…"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-print_in_green "${bold}✓ installed!${normal}\n"
-
-step "Installing spaceship theme for Oh My Zsh…"
-customzsh=$HOME/.dotfiles//zsh
-git clone https://github.com/denysdovhan/spaceship-prompt.git "$HOME/.dotfiles/zsh/themes/spaceship-prompt"
-print_in_green "${bold}✓ installed!${normal}\n"
-echo $customzsh
-ln -s "$customzsh/themes/spaceship-prompt/spaceship.zsh-theme" "$customzsh/themes/spaceship.zsh-theme"
-
-# Symlink the Mackup config file to the home directory.
-ln -s ~/.dotfiles/.mackup.cfg ~/.mackup.cfg
-
-if [ -d "$HOME/.zshrc" ]; then
-	print_success_muted "Oh My Zsh already installed."
-	if ask "You wannt to reinstallit??" Y; then
-		step "Installing Oh My Zsh…"
-		sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-		#Removes .zshrc from $HOME (if it exists).
-		rm -rf $HOME/.zshrc
-		# ymlinks the .zshrc file from the .dotfiles.
-		ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
-		# Symlink the Mackup config file to the home directory.
-		ln -s ~/.dotfiles/.mackup.cfg ~/.mackup.cfg
-		print_success "Oh My Zsh installed! & symlinks Configured"
-	fi
-fi
-
-#iTerm
-chapter "Setup iTerm…"
-defaults read com.googlecode.iterm2
-# Specify the preferences directory
-defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/iterm2"
-# Tell iTerm2 to use the custom preferences in the directory
-defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
-
-NERDFONTS=(
-	SpaceMono
-	Hack
-	AnonymousPro
-	Inconsolata
-	FiraCode
-)
-NERDFONTS_RELEASE=$(curl -L -s -H 'Accept: application/json' https://github.com/ryanoasis/nerd-fonts/releases/latest)
-NERDFONTS_VERSION=$(get_github_version $NERDFONTS_RELEASE)
-
-step "Installing fonts…"
-for font in ${NERDFONTS[@]}; do
-	if [ ! -d ~/Library/Fonts/$font ]; then
-		printf "${indent}  [↓] $font "
-		wget -P ~/Library/Fonts https://github.com/ryanoasis/nerd-fonts/releases/download/$NERDFONTS_VERSION/$font.zip --quiet
-		unzip -q ~/Library/Fonts/$font -d ~/Library/Fonts/$font
-		print_in_green "${bold}✓ done!${normal}\n"
-	else
-		print_muted "${indent}✓ $font already installed. Skipped."
-	fi
-done
-
-# Set macOS preferences
-# We will run this last because this will reload the shell
-#source .macos
-
-###############################################################################
-# OPTIONAL
-###############################################################################
-chapter "Create directory…"
-# This is a default directory for macOS user accounts but doesn't comes pre-installed
-DIRECTORIES=(
-	$HOME/Projects/PixelDima/{Sites/{OkabWP,NoorWP},api,deploy/{Gitlab/{okab,noor},Themeforest/{okab/main/okab\ theme,noor/main/noor\ theme}}}
-	$HOME/Code/{github,test}
-)
-
-step "Making directories…"
-for dir in ${DIRECTORIES[@]}; do
-	mkdir -p $dir
-done
-
-###############################################################################
-# OPTIONAL: Customizations
-###############################################################################
-chapter "Adding hot sauce…"
-if [ -f "$HOME/.hot-sauce" ]; then
-	if ask "Do you want to add hot sauce?" Y; then
-		. "$HOME/.hot-sauce"
-		printf "\n  You got hot sauce in your bag. 🔥 ${bold}Swag.${normal}\n"
-	else
-		print_success_muted "Hot sauce declined. Skipped."
-	fi
-else
-	print_warning "No ~/.hot-sauce found. Skipping."
-fi
-
-e_lemon_ated
