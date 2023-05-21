@@ -33,26 +33,46 @@ alias nuke="git clean -df && git reset --hard"
 
 alias zshconfig="code ~/.zshrc"
 alias ohmyzsh="code ~/.oh-my-zsh"
+alias aliases="code ~/dotfiles/zsh/aliases.zsh"
 
 # Aliases for a few useful commands
+alias work=$HOME"/Projects/"
+
 alias adeltahri="/Volumes/os_hdd/www/ziro/app/public/adeltahri.dev"
+
+alias noon=$HOME"/Projects/PixelDima/Sites/thenoon/app/public/wp-content/themes/noon/"
 
 alias noor=$HOME"/Projects/PixelDima/Sites/NoorWP/app/public/wp-content/themes/noor"
 alias noor_a=$HOME"/Projects/PixelDima/Sites/NoorWP/app/public/wp-content/plugins/noor_assistant"
-alias noorwp="code "$HOME"/Projects/PixelDima/Sites/NoorWP/app/public/wp-content/themes/noor/noor.code-workspace"
+
+alias noor5=$HOME"/Projects/PixelDima/Sites/noor5/app/public/wp-content/themes/noor"
+alias noor5_a=$HOME"/Projects/PixelDima/Sites/noor5/app/public/wp-content/plugins/noor_assistant"
 
 alias okab=$HOME"/Projects/PixelDima/Sites/OkabWP/app/public/wp-content/themes/okab"
-alias okabwp="code "$HOME"/Projects/PixelDima/Sites/OkabWP/app/public/wp-content/themes/okab/okab.code-workspace"
+
 alias okab_a=$HOME"/Projects/PixelDima/Sites/OkabWP/app/public/wp-content/plugins/dima_shortcodes"
 alias okab_p=$HOME"/Projects/PixelDima/Sites/OkabWP/app/public/wp-content/plugins/dima-portfolio"
 
-alias dapi=$HOME"/Projects/PixelDima/api/pixeldima-api/aws-update"
-alias apiws="code "$HOME"/Projects/PixelDima/api/pixeldima-api/api.code-workspace"
-
-alias noor_data=$HOME"/Projects/PixelDima/api/noor-data"
+alias dima_api=$HOME"/Projects/PixelDima/api/pixeldima-api/aws-update"
+alias dima_data=$HOME"/Projects/PixelDima/api/noor-data"
+alias noor_demos=$HOME"/Projects/PixelDima/api/noor-demos"
 
 alias test=$HOME"/Projects/PixelDima/Sites/TestWP/app/public/wp-content/themes/"
 
+alias ws-noor="code "$HOME"/Projects/PixelDima/Sites/NoorWP/app/public/wp-content/themes/noor/noor.code-workspace"
+alias ws-noor-5="code "$HOME"/Projects/PixelDima/Sites/noor5/app/public/wp-content/themes/noor/noor.code-workspace"
+alias ws-okab="code "$HOME"/Projects/PixelDima/Sites/OkabWP/app/public/wp-content/themes/okab/okab.code-workspace"
+alias ws-noon="code "$HOME"/Projects/PixelDima/Sites/thenoon/app/public/wp-content/themes/noon/noon.code-workspace"
+alias ws-blocks-api="code "$HOME"/Projects/open_s/blocks-api/blocks-api.code-workspace"
+alias ws-blocks-ai="code "$HOME"/Projects/PixelDima/Sites/thenoon/app/public/wp-content/plugins/dima-blocks-ai/dima-blocks-ai.code-workspace"
+alias ws-nst="code "$HOME"/Projects/PixelDima/Sites/NoorWP/app/public/wp-content/plugins/noor-starter-templates/noor-starter-templates.code-workspace"
+alias ws-dima-elements="code "$HOME"/Projects/PixelDima/Sites/NoorWP/app/public/wp-content/plugins/dima-elements/dima-elements.code-workspace"
+# Temporary aliases
+alias ws-kadence="code "$HOME"/Projects/PixelDima/Sites/kadence/app/public/wp-content/themes/kadence/kadence.code-workspace"
+
+alias python="python3"
+alias pip="pip3"
+alias pn="pnpm"
 
 # Git Commit, Add all, and Push — in one step.
 function gcap() {

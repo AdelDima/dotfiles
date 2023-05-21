@@ -122,7 +122,6 @@ echo $customzsh
 ln -s "$customzsh/themes/spaceship-prompt/spaceship.zsh-theme" "$customzsh/themes/spaceship.zsh-theme"
 fi
 
-
 # Symlink the Mackup config file to the home directory.
 if test -f "~/.mackup.cfg"; then
 ln -s ~/dotfiles/.mackup.cfg ~/.mackup.cfg
