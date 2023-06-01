@@ -81,30 +81,30 @@ function gcap() {
 
 # NEW.
 function gnew() {
-	gcap "📦 NEW: $@"
+	gcap "NEW: $@"
 }
 
 # IMPROVE.
 function gimp() {
-	gcap "👌 IMPROVE: $@"
+	gcap "IMPROVE: $@"
 }
 
 # FIX.
 function gfix() {
-	gcap "🐛 FIX: $@"
+	gcap "FIX: $@"
 }
 
 # RELEASE.
 function grlz() {
-	gcap "🚀 RELEASE: $@"
+	gcap "RELEASE: $@"
 }
 
 # DOC.
 function gdoc() {
-	gcap "📖 DOC: $@"
+	gcap "DOC: $@"
 }
 
 # TEST.
 function gtst() {
-	gcap "✅ TEST: $@"
+	gcap "TEST: $@"
 }
