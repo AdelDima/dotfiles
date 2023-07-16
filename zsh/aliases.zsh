@@ -75,36 +75,66 @@ alias pip="pip3"
 alias pn="pnpm"
 
 # Git Commit, Add all, and Push — in one step.
+# General commit function
 function gcap() {
-	git add . && git commit -m "$*" && git push
+    git add . && git commit -m "$1" && git push
 }
 
-# NEW.
-function gnew() {
-	gcap "NEW: $@"
+# Helper function for generating the commit message
+function generate_commit_message() {
+    if [[ $1 = '-s' ]]; then
+        echo "$2($3): ${@:4}"
+    else
+        echo "$2: $1"
+    fi
 }
 
-# IMPROVE.
-function gimp() {
-	gcap "IMPROVE: $@"
+# Build
+function gbuild() {
+    gcap "$(generate_commit_message "$@" "build")"
 }
 
-# FIX.
+# Chore
+function gchore() {
+    gcap "$(generate_commit_message "$@" "chore")"
+}
+
+# CI
+function gci() {
+    gcap "$(generate_commit_message "$@" "ci")"
+}
+
+# Docs
+function gdocs() {
+    gcap "$(generate_commit_message "$@" "docs")"
+}
+
+# Feat
+function gfeat() {
+    gcap "$(generate_commit_message "$@" "feat")"
+}
+
+# Fix
 function gfix() {
-	gcap "FIX: $@"
+    gcap "$(generate_commit_message "$@" "fix")"
 }
 
-# RELEASE.
-function grlz() {
-	gcap "RELEASE: $@"
+# Perf
+function gperf() {
+    gcap "$(generate_commit_message "$@" "perf")"
 }
 
-# DOC.
-function gdoc() {
-	gcap "DOC: $@"
+# Refactor
+function grf() {
+    gcap "$(generate_commit_message "$@" "refactor")"
 }
 
-# TEST.
+# Style
+function gsty() {
+    gcap "$(generate_commit_message "$@" "style")"
+}
+
+# Test
 function gtst() {
-	gcap "TEST: $@"
+    gcap "$(generate_commit_message "$@" "test")"
 }
