@@ -82,10 +82,12 @@ function gcap() {
 
 # Helper function for generating the commit message
 function generate_commit_message() {
+    local type=$1; shift
     if [[ $1 = '-s' ]]; then
-        echo "$2($3): ${@:4}"
+        local scope=$2; shift 2
+        echo "$type($scope): $*"
     else
-        echo "$2: $1"
+        echo "$type: $*"
     fi
 }
 
@@ -111,7 +113,7 @@ function gdocs() {
 
 # Feat
 function gfeat() {
-    gcap "$(generate_commit_message "$@" "feat")"
+    gcap "$(generate_commit_message "feat" "$@")"
 }
 
 # Fix
