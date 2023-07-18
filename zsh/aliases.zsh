@@ -73,6 +73,7 @@ alias ws-kadence="code "$HOME"/Projects/PixelDima/Sites/kadence/app/public/wp-co
 alias python="python3"
 alias pip="pip3"
 alias pn="pnpm"
+alias ya="yarn"
 
 # Git Commit, Add all, and Push — in one step.
 # General commit function
