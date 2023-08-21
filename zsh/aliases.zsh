@@ -69,11 +69,14 @@ alias ws-nst="code "$HOME"/Projects/PixelDima/Sites/NoorWP/app/public/wp-content
 alias ws-dima-elements="code "$HOME"/Projects/PixelDima/Sites/NoorWP/app/public/wp-content/plugins/dima-elements/dima-elements.code-workspace"
 # Temporary aliases
 alias ws-kadence="code "$HOME"/Projects/PixelDima/Sites/kadence/app/public/wp-content/themes/kadence/kadence.code-workspace"
+alias devodoo="code "$HOME"/Projects/Dimalab/devOdoo3/_devOdoo/devodoo/devodoo.code-workspace"
 
 alias python="python3"
 alias pip="pip3"
 alias pn="pnpm"
 alias ya="yarn"
+alias pnclean="rm -rf .next node_modules pnpm-lock.yaml && pnpm i && pnpm run build"
+
 
 # Git Commit, Add all, and Push — in one step.
 # General commit function
