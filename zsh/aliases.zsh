@@ -16,6 +16,7 @@ alias cfresh="rm -rf vendor/ composer.lock && composer i"
 
 # JS
 alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
+alias pnfresh="rm -rf .next node_modules pnpm-lock.yaml && pnpm i && pnpm run build"
 
 # Git
 alias commit="git add . && git commit -m"
@@ -57,25 +58,28 @@ alias dima_api=$HOME"/Projects/PixelDima/api/pixeldima-api/aws-update"
 alias dima_data=$HOME"/Projects/PixelDima/api/noor-data"
 alias noor_demos=$HOME"/Projects/PixelDima/api/noor-demos"
 
-alias test=$HOME"/Projects/PixelDima/Sites/TestWP/app/public/wp-content/themes/"
+alias y2n=$HOME"/Projects/open_s/notion/next_y2n"
 
 alias ws-noor="code "$HOME"/Projects/PixelDima/Sites/NoorWP/app/public/wp-content/themes/noor/noor.code-workspace"
 alias ws-noor-5="code "$HOME"/Projects/PixelDima/Sites/noor5/app/public/wp-content/themes/noor/noor.code-workspace"
+
 alias ws-okab="code "$HOME"/Projects/PixelDima/Sites/OkabWP/app/public/wp-content/themes/okab/okab.code-workspace"
+
 alias ws-noon="code "$HOME"/Projects/PixelDima/Sites/thenoon/app/public/wp-content/themes/noon/noon.code-workspace"
+
 alias ws-blocks-api="code "$HOME"/Projects/open_s/blocks-api/blocks-api.code-workspace"
 alias ws-blocks-ai="code "$HOME"/Projects/PixelDima/Sites/thenoon/app/public/wp-content/plugins/dima-blocks-ai/dima-blocks-ai.code-workspace"
+
 alias ws-nst="code "$HOME"/Projects/PixelDima/Sites/NoorWP/app/public/wp-content/plugins/noor-starter-templates/noor-starter-templates.code-workspace"
 alias ws-dima-elements="code "$HOME"/Projects/PixelDima/Sites/NoorWP/app/public/wp-content/plugins/dima-elements/dima-elements.code-workspace"
 # Temporary aliases
-alias ws-kadence="code "$HOME"/Projects/PixelDima/Sites/kadence/app/public/wp-content/themes/kadence/kadence.code-workspace"
 alias devodoo="code "$HOME"/Projects/Dimalab/devOdoo3/_devOdoo/devodoo/devodoo.code-workspace"
+alias nz="code "$HOME"/Projects/open_s/notion/notionzone/notionzone.code-workspace"
 
 alias python="python3"
 alias pip="pip3"
 alias pn="pnpm"
 alias ya="yarn"
-alias pnclean="rm -rf .next node_modules pnpm-lock.yaml && pnpm i && pnpm run build"
 
 
 # Git Commit, Add all, and Push — in one step.
