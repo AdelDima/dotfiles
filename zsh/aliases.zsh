@@ -74,7 +74,7 @@ alias ws-nst="code "$HOME"/Projects/PixelDima/Sites/NoorWP/app/public/wp-content
 alias ws-dima-elements="code "$HOME"/Projects/PixelDima/Sites/NoorWP/app/public/wp-content/plugins/dima-elements/dima-elements.code-workspace"
 # Temporary aliases
 alias devodoo="code "$HOME"/Projects/Dimalab/devOdoo3/_devOdoo/devodoo/devodoo.code-workspace"
-alias nz="code "$HOME"/Projects/open_s/notion/notionzone/notionzone.code-workspace"
+alias nz="code "$HOME"/Projects/notionzone/notionzone.net/notionzone.code-workspace"
 
 alias python="python3"
 alias pip="pip3"
