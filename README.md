@@ -35,12 +35,12 @@ The setup process will install:
 
 * [NVM](https://github.com/creationix/nvm/) for managing and installing multiple versions of [Node.js](http://nodejs.org/) and [npm](https://www.npmjs.org/)
 * [Yarn](https://yarnpkg.com/en/) for managing JavaScript packages
+* [pnpm](https://pnpm.js.org/) for fast, disk space efficient package manager.
 </details>
 
 <details>
 <summary>CLI Tools & Utilities:</summary>
 
-* [Gulp](https://gulpjs.com/) the streaming build system
 * [Hub](http://hub.github.com/) for interacting with the GitHub API
 * [hugo](https://gohugo.io/), an open-source static site generator
 * [ImageMagick](http://www.imagemagick.org/) to create, edit, compose, or convert bitmap images
@@ -53,7 +53,6 @@ The setup process will install:
 <summary>Productivity</summary>
 
 * [Spark](http://https://sparkmailapp.com/) for a better mail client.
-* [Alfred](https://www.alfredapp.com/) for increased productivity and efficiency with macOS.
 </details>
 
 <details>
@@ -77,7 +76,6 @@ The setup process will install:
 <summary>Communication</summary>
 
 * [Notion](http://www.notion.com/) Figma helps teams create, test, and ship better designs from start to finish.ß
-* [Skype](https://www.skype.com/en/) for free calls to friends and family.
 * [Slack](https://slack.com/) where work happens.
 * [Discord](https://discordapp.com/) like slack.
 </details>
@@ -101,7 +99,6 @@ The setup process will install:
 <details>
 <summary>Browsers</summary>
 
-* [Blisk](https://blisk.io/) for cross-device web development.
 * [Chrome](https://www.google.com/chrome/browser/desktop/) for fast and free web browsing.
 * [Firefox](https://www.mozilla.org/en-US/firefox/new/) for web browsing and testing.
 * [TorBrowser](https://www.torproject.org/projects/torbrowser.html.en) for super secret web browsing.

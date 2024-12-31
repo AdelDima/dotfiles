@@ -17,7 +17,7 @@ alias cfresh="rm -rf vendor/ composer.lock && composer i"
 # JS
 alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
 alias pnfresh="rm -rf .next node_modules pnpm-lock.yaml && pnpm i && pnpm run build"
-
+alias bunfresh="rm -rf node_modules package-lock.json bun.lockb .next && bun install"
 # Git
 alias commit="git add . && git commit -m"
 alias gcommit="git add . && git commit"
@@ -36,12 +36,13 @@ alias zshconfig="code ~/.zshrc"
 alias ohmyzsh="code ~/.oh-my-zsh"
 alias aliases="code ~/dotfiles/zsh/aliases.zsh"
 
+alias uve="uv venv && source .venv/bin/activate"
 # Aliases for a few useful commands
 alias work=$HOME"/Projects/"
 
 alias adeltahri="/Volumes/os_hdd/www/ziro/app/public/adeltahri.dev"
 
-alias noon=$HOME"/Projects/PixelDima/Sites/thenoon/app/public/wp-content/themes/noon/"
+alias thenoon=$HOME"/Projects/PixelDima/Sites/thenoon/app/public/wp-content/themes/thenoon/"
 
 alias noor=$HOME"/Projects/PixelDima/Sites/NoorWP/app/public/wp-content/themes/noor"
 alias noor_a=$HOME"/Projects/PixelDima/Sites/NoorWP/app/public/wp-content/plugins/noor_assistant"
@@ -54,7 +55,7 @@ alias okab=$HOME"/Projects/PixelDima/Sites/OkabWP/app/public/wp-content/themes/o
 alias okab_a=$HOME"/Projects/PixelDima/Sites/OkabWP/app/public/wp-content/plugins/dima_shortcodes"
 alias okab_p=$HOME"/Projects/PixelDima/Sites/OkabWP/app/public/wp-content/plugins/dima-portfolio"
 
-alias dima_api=$HOME"/Projects/PixelDima/api/pixeldima-api/aws-update"
+alias dima_api=$HOME"/Projects/PixelDima/api/pixeldima-api"
 alias dima_data=$HOME"/Projects/PixelDima/api/noor-data"
 alias noor_demos=$HOME"/Projects/PixelDima/api/noor-demos"
 
@@ -65,7 +66,7 @@ alias ws-noor-5="code "$HOME"/Projects/PixelDima/Sites/noor5/app/public/wp-conte
 
 alias ws-okab="code "$HOME"/Projects/PixelDima/Sites/OkabWP/app/public/wp-content/themes/okab/okab.code-workspace"
 
-alias ws-noon="code "$HOME"/Projects/PixelDima/Sites/thenoon/app/public/wp-content/themes/noon/noon.code-workspace"
+alias ws-noon="code "$HOME"/Projects/PixelDima/Sites/thenoon/app/public/wp-content/themes/thenoon/thenoon.code-workspace"
 
 alias ws-blocks-api="code "$HOME"/Projects/open_s/blocks-api/blocks-api.code-workspace"
 alias ws-blocks-ai="code "$HOME"/Projects/PixelDima/Sites/thenoon/app/public/wp-content/plugins/dima-blocks-ai/dima-blocks-ai.code-workspace"
@@ -73,13 +74,23 @@ alias ws-blocks-ai="code "$HOME"/Projects/PixelDima/Sites/thenoon/app/public/wp-
 alias ws-nst="code "$HOME"/Projects/PixelDima/Sites/NoorWP/app/public/wp-content/plugins/noor-starter-templates/noor-starter-templates.code-workspace"
 alias ws-dima-elements="code "$HOME"/Projects/PixelDima/Sites/NoorWP/app/public/wp-content/plugins/dima-elements/dima-elements.code-workspace"
 # Temporary aliases
-alias devodoo="code "$HOME"/Projects/Dimalab/devOdoo3/_devOdoo/devodoo/devodoo.code-workspace"
+alias devodoo="code "$HOME"/Projects/Dimalab/DevOdoo-Nextjs/devodoo.code-workspace"
 alias nz="code "$HOME"/Projects/notionzone/notionzone.net/notionzone.code-workspace"
 
-alias python="python3"
-alias pip="pip3"
+# alias python="python3"
+# alias pip="pip3"
 alias pn="pnpm"
+alias po="poetry"
 alias ya="yarn"
+alias pa="php artisan"
+alias pas="php artisan serve"
+alias pamf="php artisan migrate:fresh"
+alias pamfs="php artisan migrate:fresh --seed"
+alias paoc="php artisan optimize:clear"
+alias pacc="php artisan config:clear"
+alias pamm="php artisan make:model"
+alias pamc="php artisan make:controller"
+alias pao="pa optimize:clear && pa cache:clear && pa config:clear && pa config:cache && pa optimize && pa route:clear && pa route:cache && pa view:clear && pa view:cache"
 
 
 # Git Commit, Add all, and Push — in one step.
